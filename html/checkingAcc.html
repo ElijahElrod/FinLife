@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checking and Saving Accounts | Fin-Life</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="/imgs/fl.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/mystyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-left"><img src="/imgs/finLifeLogo.png" height="50px"></a>
+        <a href="/html/index.html">Home</a>
+        <a href="/html/about.html">About</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="basicInfo()">Basic Financial Information
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="basicInfo">
+          <a href="/html/loans.html">Loans</a>
+          <a href="/html/stocks.html">Stocks</a>
+          <a href="/html/checkingAcc.html">Checking and Savings Accounts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+              <button class="dropbtn" onclick="advancedInfo()">Advanced Financial Information
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="advancedInfo">
+                <a href="/html/derivatives.html">Derivatives</a>
+                <a href="/html/futureTrading.html">Futures Trading</a>
+                
+              </div>
+              </div>
+      </div>
+
+<h2>Checking and Savings Accounts!</h2>
+<p>Checking Accounts also known as transactional accounts are the go-to account for paying bills. Unlike Savings Accounts, 
+    Most checking accounts< do not have rules about the number of transactions you can compleach in a month. Most of the time, you
+    can't make payments directly from savings accounts due to the Regulation D that limits certain withdrawals.
+</p>
+<h3>A comparison of Checking and Savings Accounts</h3>
+<p>Savings accounts tend to have higher interest rates which makes them better suited to holding larger amounts of money</p>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function basicInfo() {
+  document.getElementById("basicInfo").classList.toggle("show");
+}
+
+function advancedInfo()
+{
+    document.getElementById("advancedInfo").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("basicInfo");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+</script>
+</body>
+</html>

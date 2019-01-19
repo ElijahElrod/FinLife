@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loans | Fin-Life</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="/imgs/fl.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/mystyle.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#" class="navbar-left"><img src="/imgs/finLifeLogo.png" height="50px"></a>
+        <a href="/html/index.html">Home</a>
+        <a href="/html/about.html">About</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="basicInfo()">Basic Financial Information
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="basicInfo">
+          <a href="/html/loans.html">Loans</a>
+          <a href="/html/stocks.html">Stocks</a>
+          <a href="/html/checkingAcc.html">Checking and Savings Accounts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+              <button class="dropbtn" onclick="advancedInfo()">Advanced Financial Information
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="advancedInfo">
+                <a href="/html/derivatives.html">Derivatives</a>
+                <a href="/html/futureTrading.html">Futures Trading</a>
+                
+              </div>
+              </div>
+      </div>
+
+<h1>Loans!</h1>
+    <h3>Personal Loans</h3>
+    <p>There are a few types of personal loans such as secured and unsecured personal loans.
+        The majority of personal loans are unsecured which means they aren't backed by a collateral.
+    </p>
+    <h4>Unsecured Personal Loans</h4>
+    <p>Unsecured personal loans have the benefit of predictable payments as you will usually get a lump sum at the beginning
+        and then have a set payment every month for the term of the loan. This is also called an installment loan.
+        <br> Source: https://www.lendingtree.com/personal/different-types-of-personal-loans/
+    </p>
+
+   
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function basicInfo() {
+  document.getElementById("basicInfo").classList.toggle("show");
+}
+
+function advancedInfo()
+{
+    document.getElementById("advancedInfo").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("basicInfo");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+</script>
+</body>
+</html>

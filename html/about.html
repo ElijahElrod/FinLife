@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Fin-Life</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="/imgs/fl.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/mystyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-left"><img src="/imgs/finLifeLogo.png" height="50px"></a>
+        <a href="/html/index.html">Home</a>
+        <a href="/html/about.html">About</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="basicInfo()">Basic Financial Information
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="basicInfo">
+          <a href="/html/loans.html">Loans</a>
+          <a href="/html/stocks.html">Stocks</a>
+          <a href="/html/checkingAcc.html">Checking and Savings Accounts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+              <button class="dropbtn" onclick="advancedInfo()">Advanced Financial Information
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="advancedInfo">
+                <a href="/html/derivatives.html">Derivatives</a>
+                <a href="/html/futureTrading.html">Futures Trading</a>
+                
+              </div>
+              </div>
+      </div>
+<h1>About Us</h1>
+<p>Fin-Life is the leading financial learning resource for unbanked adults and college students. We inform on Loans, Stocks, Checking Accounts and much more!
+    Loans are something that the majority of us will have to take out at some point in our lives and so it's extremely important to be well informed on <break>
+    atleast the basics!
+</p>
+<img src="/imgs/finLifeLogo.png" width="300px" height="300px" >
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function basicInfo() {
+  document.getElementById("basicInfo").classList.toggle("show");
+}
+
+function advancedInfo()
+{
+    document.getElementById("advancedInfo").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("basicInfo");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+</script>
+</body>
+</html>

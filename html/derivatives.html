@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derivatives | Fin-Life</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="/imgs/fl.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/mystyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-left"><img src="/imgs/finLifeLogo.png" height="50px"></a>
+        <a href="/html/index.html">Home</a>
+        <a href="/html/about.html">About</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="basicInfo()">Basic Financial Information
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="basicInfo">
+          <a href="/html/loans.html">Loans</a>
+          <a href="/html/stocks.html">Stocks</a>
+          <a href="/html/checkingAcc.html">Checking and Savings Accounts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+              <button class="dropbtn" onclick="advancedInfo()">Advanced Financial Information
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="advancedInfo">
+                <a href="/html/derivatives.html">Derivatives</a>
+                <a href="/html/futureTrading.html">Futures Trading</a>
+                
+              </div>
+              </div>
+      </div>
+
+<h1>Financial Derivatives</h1>
+<p>Here you will find information on basic and advanced financial information from loans, and mortgages to investment strategies such as futures trading.
+    The top of the page will be your navigation guide to each topic with their respective information and descriptions included.
+    The intention of this site is to have an easy and accessible place for all your financial learning needs instead of having to go to 3, 4 or more places.
+    If you find anything not working, have a question about functionality or have any other questions feel free to contact myself or anyone else on the Fin-Life team 
+    and they'd be happy to try and answer any questions you might have.</p>
+    <img  src="/imgs/deriv.jpg" border-radius: 100% width="400px" height="400px">
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function basicInfo() {
+  document.getElementById("basicInfo").classList.toggle("show");
+}
+
+function advancedInfo()
+{
+    document.getElementById("advancedInfo").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("basicInfo");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+</script>
+</body>
+</html>

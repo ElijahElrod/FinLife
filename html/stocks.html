@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stocks | Fin-Life</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="/imgs/fl.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/mystyle.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-left"><img src="/imgs/finLifeLogo.png" height="50px"></a>
+        <a href="/html/index.html">Home</a>
+        <a href="/html/about.html">About</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="basicInfo()">Basic Financial Information
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="basicInfo">
+          <a href="/html/loans.html">Loans</a>
+          <a href="/html/stocks.html">Stocks</a>
+          <a href="/html/checkingAcc.html">Checking and Savings Accounts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+              <button class="dropbtn" onclick="advancedInfo()">Advanced Financial Information
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="advancedInfo">
+                <a href="/html/derivatives.html">Derivatives</a>
+                <a href="/html/futureTrading.html">Futures Trading</a>
+                
+              </div>
+              </div>
+      </div>
+
+<h1>Stocks</h1>
+<p>This section is devoted to the different types of stocks and the methods used to trade them.</p>
+
+
+
+<h3>Stock types</h3>
+<p>*Penny Stocks: Also known as one-cent stocks are common shares of small companies that
+    trade at lower prices per share compared to their larger counterparts. A penny stock
+    is any stock that is valued at $5 or less per share.
+</p>
+<p>*Growth stocks: Shares in companies that are generating positive cash flows and whose earnings
+    are expected to grow at an above-average rate relative to the market. <br>
+   Source: https://www.onmarket.com.au/about-us/blog/4-types-of-shares-everyone-needs-to-own/
+</p>
+
+<h3>Stock Trading</h3>
+<p>*</p>
+<p>*</p>
+<p>*8</p>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function basicInfo() {
+  document.getElementById("basicInfo").classList.toggle("show");
+}
+
+function advancedInfo()
+{
+    document.getElementById("advancedInfo").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("basicInfo");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+</script>
+</body>
+</html>
